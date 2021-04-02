@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/snappy/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/snappy/app/Config" isTestSource="false" packagePrefix="Config\" />
+      <sourceFolder url="file://$MODULE_DIR$/snappy/tests/_support" isTestSource="true" packagePrefix="Tests\Support\" />
+      <excludeFolder url="file://$MODULE_DIR$/snappy/vendor/codeigniter4/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/snappy/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/snappy/vendor/kint-php/kint" />
+      <excludeFolder url="file://$MODULE_DIR$/snappy/vendor/laminas/laminas-escaper" />
+      <excludeFolder url="file://$MODULE_DIR$/snappy/vendor/laminas/laminas-zendframework-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/snappy/vendor/psr/log" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,22 @@
+version: '3'
+services:
+        snappy:
+                build: ./ci-docker/
+                container_name: snappy
+                ports: 
+                    - 3499:8080
+                restart: always
+                volumes:
+                    - ./snappy/:/var/www/html/ci
+                networks:
+                    static-network:
+                        ipv4_address: 172.23.128.7
+
+volumes:
+       pms_engine_data:
+
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.23.0.0/16

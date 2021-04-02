@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/snappy/vendor/composer" />
+      <path value="$PROJECT_DIR$/snappy/vendor/codeigniter4/framework" />
+      <path value="$PROJECT_DIR$/snappy/vendor/laminas/laminas-escaper" />
+      <path value="$PROJECT_DIR$/snappy/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/snappy/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/snappy/vendor/kint-php/kint" />
+    </include_path>
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings load_method="CUSTOM_LOADER" custom_loader_path="$PROJECT_DIR$/snappy/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+</project>
