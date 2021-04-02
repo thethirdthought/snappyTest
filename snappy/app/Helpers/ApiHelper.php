@@ -48,11 +48,11 @@ class ApiHelper
         $response = [];
         $response["dataFetchStartedAt"] = date("Y-m-d H:i:s");
         try {
-            $i = 1;
-            $url = self::$apiBaseUrl . "api/properties?api_key=".$_ENV["API_KEY"]."&page[size]=30&page[number]=$i";
+//            $i = 1;
+            $url = self::$apiBaseUrl . "api/properties?api_key=".$_ENV["API_KEY"]."&page[size]=30&page[number]=1";
 
             while ($url !== null) {
-                $i++;
+//                $i++;
 //                echo $url."\n";
                 $apiResponse = $this->getDataFromApi($url);
                 if (!$apiResponse['success']) {
@@ -65,11 +65,8 @@ class ApiHelper
                 }
                 $body = json_decode($body,true);
 
-                //Tried using next url from api response but api is not consistent and keeps on failing.
-//                $url = $body["next_page_url"] ?? null;
-                if($body["last_page"] >= $i) {
-                    $url = self::$apiBaseUrl . "api/properties?api_key=".$_ENV["API_KEY"]."&page[size]=30&page[number]=$i";
-                }
+                $url = $body["next_page_url"] ?? null;
+
                 $data = $body["data"] ?? null;
 //                echo json_encode($body) . "\n\n\n\n\n\n";
                 if (!$data || !count($data)) {
@@ -137,11 +134,10 @@ class ApiHelper
 
     /**
      * @param String $url
-     * @param array $request
      * @return array
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    private function getDataFromApi(String $url, array $request = []): array
+    private function getDataFromApi(String $url): array
     {
         $result = [];
         try {
@@ -149,8 +145,7 @@ class ApiHelper
                 'timeout' => 2.0,
             ]);
             $response = $client->request('GET',
-                $url,
-                ['query' => $request]
+                $url
             );
 
             $responseCode = $response->getStatusCode();
