@@ -51,7 +51,7 @@ class ApiHelper
             $i = 1;
             $url = self::$apiBaseUrl . "api/properties?api_key=".$_ENV["API_KEY"]."&page[size]=30&page[number]=$i";
 
-            while ($url !== null && ++$i < 10) {
+            while ($url !== null) {
 //                echo $url."\n";
                 $apiResponse = $this->getDataFromApi($url);
                 if (!$apiResponse['success']) {
