@@ -144,6 +144,7 @@ class ImageHelper
             $filename = Self::clean($filename);
             $filename = $filename.".".$imageFileType;
             $location = WRITEPATH."/uploads/fullImage/".$filename;
+            $relativePath = "uploads/fullImage/".$filename;
             $valid_extensions = array("jpg","jpeg","png");
             if(!in_array(strtolower($imageFileType), $valid_extensions)) {
                 throw new \Exception("Invalid file type");
@@ -151,6 +152,7 @@ class ImageHelper
             if(in_array(strtolower($imageFileType), $valid_extensions)) {
                 if(move_uploaded_file($file['image_full']['tmp_name'],$location)){
                     $response['location'] = $location;
+                    $response['relativePath'] = $relativePath;
                     $response['success'] = true;
                 } else {
                     throw new \Exception("Unable to upload file");

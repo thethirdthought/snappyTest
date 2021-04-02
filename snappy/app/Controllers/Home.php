@@ -64,8 +64,8 @@ class Home extends BaseController
             $generateThumbnail = ImageHelper::createThumbnail($fullImageUploadResponse["location"],
                 $thumbnailPath, 100);
 
-            $requestData["image_full"] = $fullImageUploadResponse["location"];
-            $requestData["image_thumbnail"] = $thumbnailPath;
+            $requestData["image_full"] = $fullImageUploadResponse["relativePath"];
+            $requestData["image_thumbnail"] = str_replace("fullImage", "thumbnail", $fullImageUploadResponse["relativePath"]);
             $requestData['uuid'] = $this->guidv4();
             $requestData['created_by'] = 2;
             $propertyModel = new PropertiesModel();
@@ -108,8 +108,8 @@ class Home extends BaseController
                 $generateThumbnail = ImageHelper::createThumbnail($fullImageUploadResponse["location"],
                     $thumbnailPath, 100);
 
-                $requestData["image_full"] = $fullImageUploadResponse["location"];
-                $requestData["image_thumbnail"] = $thumbnailPath;
+                $requestData["image_full"] = $fullImageUploadResponse["relativePath"];
+                $requestData["image_thumbnail"] = str_replace("fullImage", "thumbnail", $fullImageUploadResponse["relativePath"]);
             }
 
 //            $requestData['uuid'] = $this->guidv4();

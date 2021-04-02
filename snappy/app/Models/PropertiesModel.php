@@ -7,10 +7,10 @@ use CodeIgniter\Model;
 
 class PropertiesModel extends Model
 {
-    protected $table = 'properties';
-    protected $primaryKey = 'id';
+    protected string $table = 'properties';
+    protected string $primaryKey = 'id';
 
-    protected $allowedFields = [
+    protected array $allowedFields = [
         'uuid',
         'property_type_id',
         'county',
@@ -28,21 +28,22 @@ class PropertiesModel extends Model
         'type',
         'created_at',
         'updated_at',
-        'postal_code'
+        'postal_code',
+        'created_by'
     ];
 
-    protected $validationRules = [
-        'property_type_id' => 'required',
-        'county' => 'required|max_length[45]',
-        'country' => 'required|max_length[45]',
-        'town' => 'required|max_length[45]',
-        'description' => 'required|',
-        'address' => 'required|max_length[255]',
-        'num_bedrooms' => 'required|max_length[45]',
-        'num_bathrooms' => 'required|max_length[45]',
-        'price' => 'required',
-        'type' => 'required'
-    ];
+//    protected $validationRules = [
+//        'property_type_id' => 'required',
+//        'county' => 'required|max_length[45]',
+//        'country' => 'required|max_length[45]',
+//        'town' => 'required|max_length[45]',
+//        'description' => 'required|',
+//        'address' => 'required|max_length[255]',
+//        'num_bedrooms' => 'required|max_length[45]',
+//        'num_bathrooms' => 'required|max_length[45]',
+//        'price' => 'required',
+//        'type' => 'required'
+//    ];
 
     public function createDataTableQuery($data)
     {
