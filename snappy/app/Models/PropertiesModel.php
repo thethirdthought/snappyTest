@@ -7,10 +7,10 @@ use CodeIgniter\Model;
 
 class PropertiesModel extends Model
 {
-    protected string $table = 'properties';
-    protected string $primaryKey = 'id';
+    protected $table = 'properties';
+    protected $primaryKey = 'id';
 
-    protected array $allowedFields = [
+    protected $allowedFields = [
         'uuid',
         'property_type_id',
         'county',

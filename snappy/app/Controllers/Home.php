@@ -138,7 +138,8 @@ class Home extends BaseController
         $propertyModel = new PropertiesModel();
         $response = $_GET;
         $response["data"] = $propertyModel->createDataTableQuery($requestData);
-        return json_encode($response);
+        return $this->response->setJSON($response);
+//        return json_encode($response);
 
     }
 

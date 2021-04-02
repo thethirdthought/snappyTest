@@ -52,7 +52,7 @@ class ApiHelper
             $url = self::$apiBaseUrl . "api/properties?api_key=".$_ENV["API_KEY"]."&page[size]=30&page[number]=$i";
 
             while ($url !== null && ++$i < 10) {
-                echo $url."\n";
+//                echo $url."\n";
                 $apiResponse = $this->getDataFromApi($url);
                 if (!$apiResponse['success']) {
                     throw new \Exception($apiResponse["error"]);
@@ -70,7 +70,7 @@ class ApiHelper
                     $url = self::$apiBaseUrl . "api/properties?api_key=".$_ENV["API_KEY"]."&page[size]=30&page[number]=$i";
                 }
                 $data = $body["data"] ?? null;
-                echo json_encode($body) . "\n\n\n\n\n\n";
+//                echo json_encode($body) . "\n\n\n\n\n\n";
                 if (!$data || !count($data)) {
                     continue;
                 }
