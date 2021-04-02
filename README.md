@@ -28,4 +28,9 @@ app/Views/property_details.php
 
 public/resources/js/properties.js
 
+
+Script to fetch data from API should be a command as it takes a lot of time but I have linked it to direct call so that it can be used from admin panel, please note that it will take more then a few minutes to complete.
+
 PS - theam is taken from internet.
+
+
