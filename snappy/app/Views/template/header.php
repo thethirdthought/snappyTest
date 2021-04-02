@@ -14,13 +14,13 @@
     <title>SB Admin - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/resources/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="/resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/resources/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Plugin CSS -->
-    <link href="/resources/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="/resources/vendors/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/resources/css/sb-admin.css" rel="stylesheet">
